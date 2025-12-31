@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form-Based Sentiment Analysis</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            background-color: #f4f6f8;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 60px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 17px;
+            border: none;
+            border-radius: 10px;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .note {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 25px;
+            text-align: center;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Form-Based Sentiment Analysis</h1>
+    <p class="subtitle">
+        Select the session to analyze feedback collected through Google Forms.
+    </p>
+
+    <form method="POST" action="">
+        
+        <!-- SESSION NAME -->
+         <div class="form-group">
+            <label for="COURSE_ID">Course ID</label>
+            <input 
+                type="text" 
+                id="COURSE_ID" 
+                name="COURSE_ID"
+                placeholder="e.g., 12"
+                required
+            >
+        </div>
+
+        <!-- SESSION DATE -->
+        <div class="form-group">
+            <label for="DATE">Session Date</label>
+            <input 
+                type="date" 
+                id="DATE" 
+                name="DATE"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="QUESTION">Select Question</label>
+            <select 
+                id="QUESTION" 
+                name="QUESTION"
+                required
+                style="width:100%; padding:12px; border-radius:8px; border:1px solid #ccc; font-size:15px;"
+            >
+                <option value="" disabled selected>Select a question</option>
+                <option value="Question 10">
+                    Mention one thing you liked most about the training session
+                </option>
+                <option value="Question 11">
+                    Any other suggestions / feedback
+                </option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn">
+            Analyze Sentiment
+        </button>
+
+    </form>
+
+    <p class="note">
+        Feedback responses will be fetched automatically from Google Sheets.
+        Empty responses like <b>No</b>, <b>Nil</b>, or <b>NA</b> are ignored.
+    </p>
+
+    <a href="index.html" class="back-link">← Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

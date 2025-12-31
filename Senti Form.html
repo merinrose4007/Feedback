@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Topic-wise Sentiment Analysis</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #f2f5f9;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1f2937;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .topic-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+        }
+
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .topic-name {
+            font-size: 22px;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .sentiment-badge {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .positive {
+            background-color: #16a34a;
+        }
+
+        .neutral {
+            background-color: #f59e0b;
+        }
+
+        .negative {
+            background-color: #dc2626;
+        }
+
+        .remark-section {
+            margin-top: 20px;
+        }
+
+        .remark-title {
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #374151;
+        }
+
+        .remark-box {
+            background: #f9fafb;
+            border-left: 5px solid;
+            padding: 15px;
+            border-radius: 6px;
+            font-style: italic;
+        }
+
+        .positive-remark {
+            border-color: #16a34a;
+        }
+
+        .negative-remark {
+            border-color: #dc2626;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Topic-wise Sentiment Analysis</h1>
+
+    <div class="container">
+
+        <!-- 🔹 Topic Card -->
+        <div class="topic-card">
+            <div class="topic-header">
+                <div class="topic-name">Overall Positive Feedback</div>
+                <div class="sentiment-badge positive">Positive</div>
+            </div>
+
+            <div class="remark-section">
+                <div class="remark-title"> Most Positive Remark</div>
+                <div class="remark-box positive-remark">
+                    "Very informative and useful session. Learned a lot."
+                </div>
+            </div>
+
+            <div class="remark-section">
+                <div class="remark-title">Most Negative Remark</div>
+                <div class="remark-box negative-remark">
+                    "Session was rushed and concepts were not explained clearly."
+                </div>
+            </div>
+        </div>
+
+        <!-- 🔹 Another Topic Card -->
+        <div class="topic-card">
+            <div class="topic-header">
+                <div class="topic-name">Study Material</div>
+                <div class="sentiment-badge neutral">Neutral</div>
+            </div>
+
+            <div class="remark-section">
+                <div class="remark-title">Most Positive Remark</div>
+                <div class="remark-box positive-remark">
+                    "Notes provided were helpful for revision."
+                </div>
+            </div>
+
+            <div class="remark-section">
+                <div class="remark-title">Most Negative Remark</div>
+                <div class="remark-box negative-remark">
+                    "Study materials were not shared on time."
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        © Feedback Sentiment Analysis Dashboard
+    </footer>
+
+</body>
+</html>

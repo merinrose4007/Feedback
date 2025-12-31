@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Sentiment Analysis Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 85%;
+            height: 75%;
+            background: white;
+            display: flex;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Left Section */
+        .left {
+            width: 60%;
+            padding: 50px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .left h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .left p {
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        /* Right Section */
+        .right {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .btn {
+            width: 260px;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-form {
+            background: #1e88e5;
+            color: white;
+        }
+
+        .btn-overall {
+            background: #43a047;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <!-- Left Side -->
+    <div class="left">
+        <h1>Feedback Sentiment Analysis</h1>
+        <p>
+            This dashboard helps analyze student feedback using sentiment analysis
+            and topic modeling techniques. You can explore insights from individual
+            feedback forms or view overall sentiment trends to understand strengths,
+            concerns, and areas for improvement.
+        </p>
+    </div>
+
+    <!-- Right Side -->
+    <div class="right">
+        <button class="btn btn-form" onclick="location.href='/form-sentiments/'">
+            Form-based Sentiments
+        </button>
+
+        <button class="btn btn-overall" onclick="location.href='/overall-sentiments/'">
+            Overall Sentiments
+        </button>
+    </div>
+</div>
+
+</body>
+</html>
